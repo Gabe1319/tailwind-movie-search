@@ -1,16 +1,23 @@
-# React + Vite
+# MovieFind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A movie search app built with React, Vite, and Tailwind CSS, using the [OMDb API](https://www.omdbapi.com/) for data. It lets you search for movies and shows, save favorites, and switch between light and dark themes. 
 
-Currently, two official plugins are available:
+This repo is the **starter code for the Tailwind CSS chapter capstone project**. The app's functionality (search, favoriting, tab switching) is already fully built. What's missing is the visual design: a brand, a navbar, a footer, and a fully responsive layout. See the lesson introduction video for further instructions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
 
-## React Compiler
+Clone the repo and install dependencies:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+git clone https://github.com/SimplifiedOrg/tailwind-movie-search-app.git
+cd tailwind-movie-search-app
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `npm run dev` — start the dev server
+- `npm run build` — build for production
+- `npm run preview` — preview the production build
+- `npm run lint` — run ESLint
