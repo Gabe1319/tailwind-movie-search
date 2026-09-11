@@ -31,16 +31,17 @@ function Navbar({tab, setTab}) {
           onClick={() => selectTab("favorites")}>
             Favorites
           </button>
+           </nav>
           <button 
           className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-white/10 text-white cursor-pointer" 
           onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? "✕" : "☰"}
           </button>
 
-        </nav>
+       
         {menuOpen && (
           <div className="md:hidden flex flex-col gap-1 px-6 pb-4">
-               <button className={`text-left py-2 text sm font-semibold transition-colors cursor-pointer ${
+               <button className={`text-left py-2 text-sm font-semibold transition-colors cursor-pointer ${
             tab === "all"
             ? "text-brand-500"
             : "text-white/70 hover:text-white"
@@ -48,7 +49,7 @@ function Navbar({tab, setTab}) {
           onClick={() => selectTab("all")}>
             All Movies
           </button>
-          <button className={`text-left py-2 text sm font-semibold transition-colors cursor-pointer ${
+          <button className={`text-left py-2 text-sm font-semibold transition-colors cursor-pointer ${
             tab === "favorites"
             ? "text-brand-500"
             : "text-white/70 hover:text-white"
