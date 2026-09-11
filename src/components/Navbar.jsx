@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function Navbar({tab, setTab}) {
+function Navbar({tab, setTab, theme, onToggletheme}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function selectTab(value) {
@@ -31,13 +31,18 @@ function Navbar({tab, setTab}) {
           onClick={() => selectTab("favorites")}>
             Favorites
           </button>
+          <button className="w-9 h-9 flex items-center justify-center rounded-full border border-white/10 bg-white/10 text-white cursor-pointer"
+          onClick={onToggletheme}>
+            {theme === "dark" ? "☀" : "☾"}
+
+          </button>
            </nav>
           <button 
           className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-white/10 text-white cursor-pointer" 
           onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? "✕" : "☰"}
           </button>
-
+</div>
        
         {menuOpen && (
           <div className="md:hidden flex flex-col gap-1 px-6 pb-4">
@@ -63,7 +68,7 @@ function Navbar({tab, setTab}) {
           </div>
         )}
 
-      </div>
+      
 
     </header>
   )
