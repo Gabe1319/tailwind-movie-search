@@ -9,7 +9,7 @@ function SearchBar({ value, onChange }) {
         placeholder="Search by title"
         value={value}
         onChange={onChange}
-        className="w-full max-w-xl mx-auto block px-5 py-3 rounded-full border border-white/10 bg-white/10 text-white text-lg outline-none backdrop-blur-lg placeholder:text-white/40 transition-colors focus:border-red-600/90 focus:ring-4 focus:ring-red-600/20"
+        className="w-full max-w-xl mx-auto block px-5 py-3 rounded-full border border-white/10 bg-white/10 text-white text-lg outline-none backdrop-blur-lg placeholder:text-white/40 transition-colors focus:border-brand-600/90 focus:ring-4 focus:ring-brand-600/20"
       />
     </div>
   );
