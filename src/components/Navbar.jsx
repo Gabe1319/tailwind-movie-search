@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function Navbar({tab, setTab, theme, onToggletheme}) {
+function Navbar({tab, setTab, theme, onToggleTheme}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function selectTab(value) {
@@ -9,16 +9,16 @@ function Navbar({tab, setTab, theme, onToggletheme}) {
   }
 
   return(
-    <header className="w-full border-b border-white/10 bg-black/20 backdrop-blur-lg">
+    <header className="w-full border-b border-black/10  dark:border-white/10 bg-white/60 dark:bg-black/20 dark:backdrop-blur-lg">
       <div className="max-w-[1180px] mx-auto px-6 py-4 flex items-center justify-between">
-        <span className="text-xl font-bold tracking-tight text-white">
+        <span className="text-xl font-bold tracking-tight text-neutral-900 dark:text-white">
         Movie<span className="text-brand-500">Find</span>
         </span>
         <nav className="hidden md:flex items-center gap-8">
           <button className={`text-sm font-semibold transition-colors cursor-pointer ${
             tab === "all"
             ? "text-brand-500"
-            : "text-white/70 hover:text-white"
+            : "text-neutral-500 dark:text-white/70 hover:text-neutral-900 dark:hover:text-white"
           }`}
           onClick={() => selectTab("all")}>
             All Movies
@@ -26,19 +26,19 @@ function Navbar({tab, setTab, theme, onToggletheme}) {
           <button className={`text-sm font-semibold transition-colors cursor-pointer ${
             tab === "favorites"
             ? "text-brand-500"
-            : "text-white/70 hover:text-white"
+            : "text-neutral-500 dark:text-white/70 hover:text-neutral-900 dark:hover:text-white"
           }`}
           onClick={() => selectTab("favorites")}>
             Favorites
           </button>
-          <button className="w-9 h-9 flex items-center justify-center rounded-full border border-white/10 bg-white/10 text-white cursor-pointer"
-          onClick={onToggletheme}>
+          <button className="w-9 h-9 flex items-center justify-center rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/10 text-neutral-900 dark:text-white cursor-pointer"
+          onClick={onToggleTheme}>
             {theme === "dark" ? "☀" : "☾"}
 
           </button>
            </nav>
           <button 
-          className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-white/10 bg-white/10 text-white cursor-pointer" 
+          className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border  border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/10 text-neutral-900 cursor-pointer" 
           onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? "✕" : "☰"}
           </button>
@@ -49,7 +49,7 @@ function Navbar({tab, setTab, theme, onToggletheme}) {
                <button className={`text-left py-2 text-sm font-semibold transition-colors cursor-pointer ${
             tab === "all"
             ? "text-brand-500"
-            : "text-white/70 hover:text-white"
+            : "text-neutral-500 dark:text-white/70 hover:text-neutral-900 dark:hover:text-white"
           }`}
           onClick={() => selectTab("all")}>
             All Movies
@@ -57,10 +57,15 @@ function Navbar({tab, setTab, theme, onToggletheme}) {
           <button className={`text-left py-2 text-sm font-semibold transition-colors cursor-pointer ${
             tab === "favorites"
             ? "text-brand-500"
-            : "text-white/70 hover:text-white"
+            : "text-neutral-500 dark:text-white/70 hover:text-neutral-900 dark:hover:text-white"
           }`}
           onClick={() => selectTab("favorites")}>
             Favorites
+          </button>
+          <button className="text-left py-2 text-sm font-semibold cursor-pointer text-neutral-500 dark:text-white/70"
+          onClick={onToggleTheme}>
+            {theme === "dark" ? "☀ Light Mode" : "☾ Dark Mode"}
+
           </button>
 
 
